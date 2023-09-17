@@ -12,15 +12,17 @@ const Navbar = () => {
         {name: 'Blog', id: 'blog', path: '/blog',}
         ];
     return (
-        <nav>
-          <div className="md:hidden text-2xl" onClick={()=> setOpen(!open)}>
+        <nav className="relative">
+          <div className="md:hidden text-2xl bg-slate-300 p-4" onClick={()=> setOpen(!open)}>
           {
             open === true ? <AiOutlineClose /> :  <AiOutlineMenu />
           }
             
             
           </div>
-           <ul className="md:flex gap-5 text-blue-900 font-medium">
+           <ul className={`md:flex duration-1000 md:item-center gap-5 
+           ${open ? 'top-14' : '-top-80'}
+           text-blue-900 font-medium bg-slate-200 px-5 pb-5 space-y-2 absolute md:static `}>
            {
                 routes.map(route => <Link route={route}  key={route.id}
                 ></Link>
