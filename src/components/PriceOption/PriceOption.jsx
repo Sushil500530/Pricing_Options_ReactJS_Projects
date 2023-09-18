@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'; 
 import Feature from '../feature/Feature';
 const PriceOption = ({option}) => {
     const {name,price,features} = option ;
     // console.log(option);
     return (
+        <>
         <div className='bg-gray-400 p-4 rounded '>
             <h2>
                 <span className="text-5xl font-semibold text-center">Price: {price}</span>
@@ -11,8 +12,8 @@ const PriceOption = ({option}) => {
                 </h2>
                 <h4 className='text-3xl text-center'>{name}</h4>
                 {
-                    features.map((feature,idx) => <Feature
-                    key={idx}
+                    features.map((feature,index) => <Feature
+                    key={index}
                     feature={feature}
                     ></Feature>)
                 }
@@ -21,10 +22,11 @@ const PriceOption = ({option}) => {
                 
                 </div>
         </div>
+        </>
     );
 };
 PriceOption.propTypes = {
-    option: PropTypes.object.isRequired,
+    option: PropTypes.object.isRequired
 }
 
 export default PriceOption;
