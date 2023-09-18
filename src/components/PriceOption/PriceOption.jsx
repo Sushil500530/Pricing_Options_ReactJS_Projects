@@ -18,7 +18,7 @@ const PriceOption = ({option}) => {
                     ></Feature>)
                 }
                 <div className='flex item-center justify-center'>
-                <button className='mt-6 w-full px-6 py-1 font-medium text-xl border-2 rounded border-green-500 text-green-900 hover:bg-green-500 hover:text-white hover:transition duration-300 hover:-translate-y-1 hover:scale-100 transition ease-in-out delay-150'>Buy Now</button>
+                <button className='mt-6 w-full px-6 py-1 font-medium text-xl border-2 rounded border-green-500 text-green-900 hover:bg-green-500 hover:text-white hover:transition duration-300 hover:-translate-y-1 hover:scale-100 transition ease-in-out'>Buy Now</button>
                 
                 </div>
         </div>

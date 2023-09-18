@@ -1,6 +1,5 @@
 
 import './App.css'
-import DaisyNav from './components/DaisyNav/DaisyNav'
 import LineChart from './components/LineChart/LineChart'
 import Navbar from './components/NavBar/Navbar'
 import Phones from './components/Phones/Phones'
@@ -12,8 +11,9 @@ function App() {
   return (
     <>
       <Navbar />
-     <DaisyNav />
+     {/* <DaisyNav /> */}
      <h1 className='text-6xl text-violet-500 font-bold text-center my-6'>Pricing Options</h1>
+     <hr className='my-5' />
      <PriceOptions />
      <LineChart />
      <Phones />

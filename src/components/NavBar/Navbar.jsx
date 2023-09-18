@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className="relative">
           <div className="md:hidden text-2xl bg-slate-300 p-4" onClick={()=> setOpen(!open)}>
           {
-            open === true ? <AiOutlineClose /> :  <AiOutlineMenu />
+            open === true ? <AiOutlineClose className="cursor-pointer" /> :  <AiOutlineMenu className="cursor-pointer" />
           }
             
             

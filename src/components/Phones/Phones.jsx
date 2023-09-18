@@ -1,8 +1,11 @@
 
 import axios from "axios";
 import {useState,useEffect} from "react"
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Bars,Puff} from  'react-loader-spinner'
+import { BarChart, Bar, XAxis, YAxis,Tooltip} from 'recharts';
+import { Bars,Puff} from  'react-loader-spinner' ;
+import React from 'react'
+
+
 const Phones = () => {
     const [phones,setPhones] =useState([]) ;
     const [loading,setLoading] = useState(true)
