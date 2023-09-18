@@ -2,9 +2,10 @@
 import axios from "axios";
 import {useState,useEffect} from "react"
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import { Bars,Puff} from  'react-loader-spinner'
 const Phones = () => {
-    const [phones,setPhones] =useState([])
+    const [phones,setPhones] =useState([]) ;
+    const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
         // fetch('https://openapi.programming-hero.com/api/phones?search=iphone')
@@ -23,12 +24,34 @@ const Phones = () => {
             })
             console.log(phonesWidthFakeData);
             setPhones(phonesWidthFakeData)
+            setLoading(false)
         })
     },[])
 
     // console.log(phones);
     return (
         <div>
+            {loading && <div className="flex justify-center items-center">
+            <Bars
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="bars-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                />
+                <Puff
+                    height="80"
+                    width="80"
+                    radius={1}
+                    color="#4fa94d"
+                    ariaLabel="puff-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    />
+                </div>}
             <h2 className="text-5xl">Phones: {phones.length}</h2>
             
             <BarChart width={1200} height={400} data={phones}>
@@ -37,7 +60,6 @@ const Phones = () => {
             <YAxis></YAxis>
             <Tooltip></Tooltip>
             </BarChart>
-        
         </div>
     );
 };
